@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - take home assignment: template</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<w-horizontal-tab-navigation>
+  <input id="#recipe" type="radio" name="navigation_items"></input>
+  <label for="#recipe">Recipe</label>
+
+  <input id="#jobs" type="radio" name="navigation_items"></input>
+  <label for="#jobs">Jobs</label>
+
+  <input id="#connections" type="radio" name="navigation_items"></input>
+  <label for="#connections">Connections</label>
+
+  <input id="#versions" type="radio" name="navigation_items"></input>
+  <label for="#versions">Versions</label>
+
+  <input id="#test_cases" type="radio" name="navigation_items" checked></input>
+  <label for="#test_cases">Test cases<span class="help_icon" id="help-icon"><help_icon></help_icon></span></label>
+
+  <input id="#settings" type="radio" name="navigation_items"></input>
+  <label for="#settings">Setting</label>
+</w-horizontal-tab-navigation>
+
+<!-- Where popup starts -->
+<div class="popup" id="popup">
+  <span class="popup-inner">
+      <span class="arrow-up"></span>
+      <button class="close-btn">×</button>
+      <div class="feature-tag">NEW FEATURE</div>
+      <div class="slides">
+          <div class="slide" id="slide1">
+              <div class="content">
+                <h2 class="header">Manage test cases easily</h2>
+                <p class="body-text">Set up and keep track of your many test cases as a team.</p>
+              </div>
+              <div class="controls">
+                  <button class="next">Next</button>
+                  <div class="progress-bar">
+                    <span class="progress-dot active"></span>
+                    <span class="progress-dot"></span>
+                    <span class="progress-dot"></span>
+                  </div>
+              </div>
+          </div>
+          <div class="slide" id="slide2" style="display:none;">
+              <div class="content">
+                <h2 class="header">Test with mock data</h2>
+                <p class="body-text">Simulate possible scenarios with mock data, to speed up the process and keep your app data clean.</p>
+              </div>
+              <div class="controls">
+                  <button class="prev">Back</button>
+                  <button class="next">Next</button>
+                  <div class="progress-bar">
+                    <span class="progress-dot"></span>
+                    <span class="progress-dot active"></span>
+                    <span class="progress-dot"></span>
+                  </div>
+              </div>
+          </div>
+          <div class="slide" id="slide3" style="display:none;">
+              <div class="content">
+                <h2 class="header">Run checks within seconds</h2>
+                <p class="body-text">Check the output value of any step, against your expected outcome, automatically.</p>
+              </div>
+              <div class="controls">
+                  <button class="prev">Back</button>
+                  <a href="https://www.workato.com/product-hub/test-automation-simpler-automated-test-recipes/?utm_source=codepen&utm_medium=product_walkthrough&utm_campaign=take_home_assignment" class="next" target="_blank">Learn more</a>
+                  <div class="progress-bar">
+                    <span class="progress-dot"></span>
+                    <span class="progress-dot"></span>
+                    <span class="progress-dot active"></span>
+                  </div>
+              </div>
+      </div>
+    </span>
+</div>
+<script src="script.js"></script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
