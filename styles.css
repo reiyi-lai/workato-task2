@@ -1,0 +1,181 @@
+/* Styles for horizontal nav bar */
+w-horizontal-tab-navigation {
+  display: flex;
+  gap: 1rem;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Segoe UI", sans-serif;
+  border-bottom: 1px solid grey;
+}
+w-horizontal-tab-navigation input {
+  display: none;
+}
+w-horizontal-tab-navigation label {
+  color: #314e5a;
+  position: relative;
+  padding-block: 0.5rem;
+  padding-inline: 5px;
+  cursor: pointer;
+}
+w-horizontal-tab-navigation label::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  transition: width 0.3s ease;
+  height: 5px;
+  background: #065f69;
+}
+w-horizontal-tab-navigation input:checked + label {
+  color: #065f69;
+}
+w-horizontal-tab-navigation input:checked + label::before {
+  width: 100%;
+}
+w-horizontal-tab-navigation help_icon::before {
+  content: "?";
+  text-align: center;
+  display: inline-block;
+  margin-left: 5px;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100px;
+  box-shadow: 0px 0px 0px 1px #000000;
+}
+.help_icon {
+  position: relative;
+}
+
+/* Styles for the popup wrapper */
+.popup {
+  position: absolute;
+  display: none;
+  z-index: 1000;
+  background: white;
+  padding-top: 35px;
+  padding-bottom: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  font-family: "Segoe UI", sans-serif;
+}
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 25px;
+  color: #AAA;
+}
+.feature-tag {
+  background-color: var(--color_teal, #A6F3E7);
+  color: black;
+  font-size: 9px;
+  padding: 6px 9px;
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Style for slides */
+.slides {
+  position: relative;
+  width: 100%;
+}
+.slide {
+  transition: all 0.3s ease;
+  display: flex;
+  padding-top: 150px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 650px;
+}
+/* Background images for each slide */
+#slide1,
+#slide2,
+#slide3 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#slide1 {
+  background-image: url('https://content.pendo.workato.com/R2wnX6czVSNYFGZiUo8I-3xYplQ/guide-media-58c9188d-985d-474d-9781-8da9150cdc38');
+}
+#slide2 {
+  background-image: url('https://content.pendo.workato.com/ARJmdVHP-_mXY8lLN7Mkr8sEtUE/guide-media-0dc564a5-bd32-401e-9079-a5a399c00607');
+}
+#slide3 {
+  background-image: url('https://content.pendo.workato.com/R2wnX6czVSNYFGZiUo8I-3xYplQ/guide-media-1fed5ed4-ae1a-43d3-ab20-95e76fd997a9');
+}
+/* Styles for text content */
+.content {
+  margin-left: 45px;
+  position: absolute;
+  top: 40px;
+  width: 270px;
+}
+h2,
+p {
+  margin: 0;
+}
+h2 {
+  font-size: 20px;
+}
+.body-text {
+  color: #666;
+  margin: 10px 0 20px;
+  font-size: 14px;
+}
+/* Styles for buttons and progress bar */
+.controls {
+  margin-left: 45px;
+}
+.next,
+.prev {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  height: auto;
+}
+.next {
+  background-color: var(--color_teal, #67EADD);
+  color: black;
+  border: none;
+  text-decoration: none;
+}
+.prev {
+  border: 1px solid lightgrey;
+  background: none;
+  color: black;
+}
+.progress-bar {
+  display: flex;
+  justify-content: left;
+  margin-top: 35px;
+}
+.progress-dot {
+  height: 8px;
+  width: 8px;
+  background-color: #ccc;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+.progress-dot.active {
+  width: 30px;
+  background-color: var(--color_teal, #67EADD);
+}
