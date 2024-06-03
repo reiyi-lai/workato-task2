@@ -63,7 +63,7 @@ w-horizontal-tab-navigation help_icon::before {
   padding-bottom: 40px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  position: absolute;
+  position: relative;
   height: 290px;
   top: 100%;
   left: 50%;
